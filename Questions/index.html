@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6 Environment</title>
+</head>
+
+<body>
+    <div>Javascript Questions</div>
+    <div>
+        <h1>Asynchronous code</h1>
+        <p>In JavaScript we have the concept of ‘asynchronous’ code. This simply means code that does not run instantly
+            in line. Perhaps the code needs to wait a moment, wait for something to happen, or in the case we will
+            explore today, wait until data comes back from a server. </p>
+        <p>JS can do two things at same time, example api call</p>
+
+        <h2>For Asynchronous Code we can use Promises, Async Await or Callbacks</h2>
+        <h2>Promises</h2>
+        <p>Built into ES6</p>
+        <p>tells browser task is finished</p>
+        <p>Promises are a design pattern for use when handling asynchronous code in JavaScript. We use them as an
+            alternative to nesting multiple callbacks. You may have heard of a problem called callback hell.</p>
+        <p>If the promise succeeds, it will return the value as a parameter into a callback passed into .then(). If the
+            promise fails, the callback passed into the .catch() runs, taking an error as its argument.</p>
+        <p>
+            <li>Use promises whenever you are using asynchronous or blocking code.</li>
+            <li> resolve maps to then and reject maps to catch for all practical purposes.</li>
+            <li> Make sure to write both .catch and .then methods for all the promises.</li>
+            <li> If something needs to be done in both the cases use .finally</li>
+            <li> We only get one shot at mutating each promise.</li>
+            <li> We can add multiple handlers to a single promise.</li>
+            <li> The return type of all the methods in Promise object whether they are static methods or prototype
+                methods is again a Promise</li>
+            <li> In Promise.all the order of the promises are maintained in values variable irrespective of which
+                promise was first resolved.</li>
+        </p>
+    </div>
+    <div>
+        <h2>async await</h2>
+        <p>
+            <li>async functions returns a promise.</li>
+            <li>async functions returns a promise.</li>
+            <li>async functions use an implicit Promise to return its result. Even if you don’t return a promise
+                explicitly async function makes sure that your code is passed through a promise.</li>
+            <li> await blocks the code execution within the async function, of which it(await statement) is a part.</li>
+            <li>There can be multiple await statements within a single async function.</li>
+            <li>When using async await make sure to use try catch for error handling.</li>
+            <li>Be extra careful when using await within loops and iterators. You might fall into the trap of writing
+                sequentially executing code when it could have been easily done in parallel.</li>
+            <li>await is always for a single promise.</li>
+            <li>Promise creation starts the execution of asynchronous functionality.</li>
+            <li>await only blocks the code execution within the async function. It only makes sure that next line is
+                executed when the promise resolves. So if an asynchronous activity has already started then await will
+                not have an effect on it.</li>
+        </p>
+    </div>
+    <div>
+        <h1>ES6</h1>
+        <p>Benefits</p>
+        <p>Promise</p>
+        <p>destructuring</p>
+        <p>var list = [ 1, 2, 3 ]
+            var [ a, , b ] = list
+            [ b, a ] = [ a, b ]</p>
+    </div>
+    <div>
+        <h1>Hoisting</h1>
+        <p>declarations of variables are hoisted to the top in JS, example: let x or var y</p>
+        <p>Initialized values are not hoisted, ex: var x = 5</p>
+        <p>If you don't understand, can cause errors in code.</p>
+    </div>
+    <div>
+        <h1>Scope</h1>
+        <p>Types of Scope</p>
+        <p>In JavaScript there are three types of scope:</p>
+
+        <li>Global Scope — variables can be accessed everywhere.</li>
+        <li>Function Scope — variables can be accessed in the boundaries of the function in which they are defined.</li>
+        <li>Block Scope — variables can be accessed in the block in which they are defined. A block is separated by {
+            and }.</li>
+        </p>
+    </div>
+    <div>
+        <h1>use strict</h1>
+        <p>Strict mode makes it easier to write "secure" JavaScript.</p>
+        <p>Using a variable or object without declaring it, is not allowed</p>
+        <p>deleting a variable, object or function is not allowed</p>
+        <p>eval and arguements cannot be used as variables</p>
+        <p>this word cannot be used without defining an object</p>
+        <p>following words cannot be used as variables:implements
+            interface
+            let
+            package
+            private
+            protected
+            public
+            static
+            yield</p>
+    </div>
+
+    <div>
+        <h1>Advantages of JavaScript</h1>
+        <h3>Speed</h3>
+        <p>does not need calls to a backend server</p>
+        <p>Nor does it need to be compiled by the client</p>
+        <p>client side, so reduces demand on webserver</p>
+        <h3>Useability</h3>
+        <p>Javascript is highly used and supported</p>
+        <p>works well with other languages, can be inserted into other file types</p>
+        <h3>Third party scripts</h3>
+        <p>Can be used on third party scripts. Such as pop-up ads on random websites. Does not need to be tied to one
+            website</p>
+
+
+    </div>
+
+    <div>
+        <h1>Disadvantages of JS</h1>
+        <p>Client-side security. Because code executes on users computer, can be used for malicious purposes</p>
+        <p>Browser support, JS is sometimes interpreted differently by different browsers.</p>
+    </div>
+
+
+    <div>
+        <h1>Dot notation</h1>
+        <p>most commonly used with objects</p>
+        <p>easier to right and read</p>
+        <p>let obj = {
+            cat: 'meow',
+            dog: 'woof'
+            };
+            let sound = obj.cat;</p>
+        <p>Property identifies can only be alphanumeric (and _ and $)</p>
+        <p> Property identifiers cannot start with a number.</p>
+        <p>Property identifiers cannot contain variables.</p>
+        <p>OK — obj.prop_1, obj.prop$</p>
+        <p>Not OK — obj.1prop, obj.prop name</p>
+    </div>
+
+    <div>
+        <h1>Bracket notation</h1>
+        <p> used with arrays and objects</p>
+        <p>let obj = {
+            cat: 'meow',
+            dog: 'woof'
+            };
+            let sound = obj['cat'];</p>
+        <p>Dynamic</p>
+        <p>can use variables with bracket notation, not dot notation</p>
+        <p>let obj = {
+            cat: 'meow',
+            dog: 'woof'
+            };
+            let dog = 'cat';
+            let sound = obj[dog];
+            console.log(sound);
+            // meow</p>
+        <p>Property identifiers have to be a String or a variable that references a String.</p>
+        <p>It is okay to use variables, spaces, and Strings that start with numbers</p>
+        <p>OK — obj["1prop"], obj["prop name"]</p>
+    </div>
+
+    <div>
+        <h3>Constructor</h3>
+        <p>create blueprint of an object</object></p>
+        <p>
+            function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            }
+        </p>
+        <p>can create object with new</p>
+        <p>var myFather = new Person("John", "Doe", 50, "blue");</p>
+        <p> var myMother = new Person("Sally", "Rally", 48, "green");</p>
+
+    </div>
+    <div>
+        <h3>Singleton</h3>
+        <p>Only a single instance.</p>
+        <p>var user = {
+            name: 'Shruti Kapoor',
+            location: 'SF',
+            intro: function() {
+            return this.name + ', ' + this.location
+            }
+            }</p>
+
+        <p>You can only have a single instance</p>
+        <p> You need to manage the state of this instance.</p>
+        <p> You do not care about initialization of this instance at runtime.</p>
+        <p>You need to access it across your app.</p>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
